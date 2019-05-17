@@ -1,0 +1,63 @@
+var a = 3;
+var b = 3;
+var c = 4;
+assert a == b;
+assert a == a;
+assert a != c;
+assert c > b;
+assert b >= a;
+assert b < c;
+assert b <= a;
+
+var d = "foo";
+var e = "foo";
+var f = "bar";
+assert d == e;
+assert d == d;
+assert d != f;
+
+var a = True;
+var b = False;
+assert a;
+assert !b;
+assert !!a;
+assert a != b;
+assert c;
+assert !!c;
+
+//String Concatenation
+//print "hello" + " " + "world";
+//assert "hello world" == "hello" + " " + "world";
+
+//Boolean Manipulation
+
+
+//Integer Manipulation
+var num = 3;
+num = 3 + 2;
+assert num == 5;
+num = -num;
+assert num == -5;
+num = num * 2;
+assert num == -10;
+
+//Order of operations
+assert 2 + 4 * 3 == 14;
+num = 4;
+assert 2 + num * 3 == 14;
+assert (2 + 4) * 3 == 18;
+
+//Logical operators
+assert True or True;
+assert True and True;
+assert !(True and False);
+assert !(False and False);
+assert True or False;
+assert False or True;
+assert !(False or False);
+assert 2 < 3 and 3 < 4;
+
+//Complex Expressions
+assert 3 > 2 == 4 > 2;
+assert (num = 2) == 2;
+assert !(3 > 4) == 4 > 2;
