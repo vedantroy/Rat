@@ -8,6 +8,10 @@
     <artifactId>rat</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <antlr4.version>4.7.2</antlr4.version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -22,7 +26,7 @@
             <plugin>
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr4-maven-plugin</artifactId>
-                <version>4.0</version>
+                <version>${antlr4.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -55,7 +59,7 @@
         <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4-runtime</artifactId>
-            <version>4.0</version>
+            <version>${antlr4.version}</version>
         </dependency>
     </dependencies>
 

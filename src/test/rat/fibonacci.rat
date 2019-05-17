@@ -1,0 +1,13 @@
+//Prints first 20 fibonacci numbers
+var prev = 1;
+var cur = 1;
+
+var i = 0;
+while(i < 20) {
+    print prev;
+    print cur;
+    var temp = cur;
+    prev = prev + cur;
+    cur = prev + temp;
+    i = i + 1;
+}

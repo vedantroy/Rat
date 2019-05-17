@@ -11,7 +11,7 @@ public class Rat {
 
 
     public static void main(String[] args) throws IOException {
-        String inputFile = "src/test/rat/tests.rat";
+        String inputFile = "src/test/rat/fibonacci.rat";
         //if ( args.length > 0 ) inputFile = args[0];
         InputStream is = System.in;
         if ( inputFile!= null ) is = new FileInputStream(inputFile);
