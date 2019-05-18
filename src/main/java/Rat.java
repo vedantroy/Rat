@@ -2,6 +2,7 @@ import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,10 +12,13 @@ public class Rat {
 
 
     public static void main(String[] args) throws IOException {
-        String inputFile = "src/test/rat/fibonacci.rat";
-        //if ( args.length > 0 ) inputFile = args[0];
         InputStream is = System.in;
-        if ( inputFile!= null ) is = new FileInputStream(inputFile);
+        if(args.length == 0) {
+            System.out.println("No path to .rat file passed as argument. Type rat code below.");
+            System.out.println("To finish type an EOF (Ctrl-D (Linux), Ctrl-Z-Enter (Windows))");
+        } else {
+            is = new FileInputStream(new File(args[0]));
+        }
         ANTLRInputStream input = new ANTLRInputStream(is);
         RatLexer lexer = new RatLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
