@@ -62,5 +62,4 @@
             <version>${antlr4.version}</version>
         </dependency>
     </dependencies>
-
 </project>
